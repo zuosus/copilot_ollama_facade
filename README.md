@@ -1,11 +1,14 @@
-# ollama-facade
+# copilot_ollama_facade
 
-`ollama-facade` 是一个本地 `python3` 代理：
+`copilot_ollama_facade` 是一个本地 `python3` 代理：
 
 - 对外暴露 Ollama 兼容接口（默认 `http://127.0.0.1:11434`）
 - 对内转发到 OpenAI 兼容上游（第三方）
 
 目标场景：让 VSCode 继续按 Ollama 本地地址访问，但实际走第三方模型。
+
+![language models](./language_models.png)
+![copilot](./copilot.png)
 
 ## 0.6.4 兼容能力
 
