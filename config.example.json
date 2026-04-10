@@ -1,0 +1,46 @@
+{
+  "listen_host": "127.0.0.1",
+  "listen_port": 11434,
+  "ollama_version": "0.6.4",
+  "stream_default": true,
+  "keep_alive_default": "5m",
+  "upstream_base_url": "https://your-third-party.example.com/v1",
+  "upstream_api_key": "YOUR_API_KEY",
+  "upstream_chat_path": "/chat/completions",
+  "upstream_completions_path": "/completions",
+  "upstream_models_path": "/models",
+  "upstream_embeddings_path": "/embeddings",
+  "default_model": "thirdparty-chat-large",
+  "default_capabilities": [
+    "completion"
+  ],
+  "model_map": {
+    "llama3.1": "thirdparty-chat-large",
+    "qwen2.5-coder": "thirdparty-coder",
+    "bge-m3": "thirdparty-embedding"
+  },
+  "model_capabilities": {
+    "llama3.1": [
+      "completion",
+      "tools",
+      "insert"
+    ],
+    "qwen2.5-coder": [
+      "completion",
+      "tools",
+      "insert"
+    ],
+    "bge-m3": [
+      "embedding"
+    ]
+  },
+  "models": [
+    "llama3.1",
+    "qwen2.5-coder",
+    "bge-m3"
+  ],
+  "tags_include_capabilities": true,
+  "headers": {},
+  "timeout": 180,
+  "insecure_skip_tls_verify": false
+}
